@@ -1,0 +1,284 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    transform: translateY(100px);
+
+}
+
+.head-text {
+    text-align: center;
+
+}
+
+.form-container {
+
+    padding: 100px;
+    width: 30rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px 5px rgb(219, 218, 218);
+    padding: 10px;
+    position: relative;
+}
+
+/* !All input styling */
+.all-inputs-container {
+    margin-left: 50px;
+}
+
+.input {
+    border: 3px solid rgb(185, 185, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    transform: translateX(15px);
+    display: inline;
+}
+
+.input:focus {
+    border: 3px solid rgb(145, 145, 255);
+    outline: none;
+
+}
+
+/* Input head text styling */
+.input-head-text {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: rgb(114, 114, 114);
+}
+
+.input-head-text::after {
+    content: "*";
+    color: red;
+}
+
+.cvv-head-text {
+    margin-right: 30px;
+    transform: translateX(-15px);
+}
+
+/* Input div styling */
+.number-div {
+    display: flex;
+    margin-left: 12px;
+}
+
+.name-div {
+    margin-left: 15px;
+}
+
+.cvv-date-div {
+    margin-left: 15px;
+    margin-bottom: 20px;
+
+}
+
+.cvv-div,
+.date-div {
+    display: inline;
+}
+
+/* Individual input styling */
+/* Number input styling  */
+.numb-input {
+    width: 50px;
+    padding: 10px;
+    margin: 0 3px;
+    border: 3px solid rgb(185, 185, 255);
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    transform: translateX(15px);
+}
+
+/* Name input styling */
+.name-input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 295px;
+}
+
+/* CVV and Date input styling */
+.cvv-input,
+.date-input {
+    margin-top: 10px;
+    padding: 10px;
+    display: inline;
+}
+
+.cvv-input {
+    width: 60px;
+    margin-right: 30px;
+}
+
+.date-input,
+.month {
+    width: 75px;
+}
+
+.expDateHeaderTextEdit {
+    color: red;
+    margin-left: -27px;
+}
+
+.expDateHeaderText {
+    color: rgb(114, 114, 114);
+    margin-left: 30px;
+}
+
+.expDateHeaderTextEdit2 {
+    color: red;
+    margin-left: 30px;
+}
+
+.expDateHeaderTextEdit3 {
+    color: red;
+    margin-left: -27px;
+}
+
+
+.date-head-text {
+    transform: translateX(-3px);
+}
+
+.card-details-head-text {
+    display: block;
+    text-align: center;
+    margin-top: 38px;
+    font-size: 32px;
+    color: rgb(114, 114, 114);
+}
+
+.submit-btn {
+    background-color: rgb(185, 185, 255);
+    border: none;
+    color: #fff;
+    padding: 13px;
+    width: 340px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+    font-size: 24px;
+    border-radius: 999px;
+    margin-top: 20px;
+    transition: .09s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(145, 145, 255);
+}
+
+.submit-btn:active {
+    background-color: rgb(119, 119, 248);
+}
+
+/*! Confirmation screen styling*/
+.card-confirmation-head-text {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    color: rgb(114, 114, 114);
+}
+
+.confirmation-paragraph {
+    padding: 25px 70px;
+    text-align: center;
+    color: rgb(114, 114, 114);
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.confirmation-Congratulations-sentence {
+    font-size: 20px;
+}
+
+.confirmation-Congratulations-word {
+    font-weight: bolder;
+}
+
+.confirmation-appreciate-sentence {
+    display: block;
+    border: 3px solid rgb(185, 185, 255);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/*! Loading screen */
+.loading-screen {
+    height: 478px;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader-card-details-head-text {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    color: rgb(114, 114, 114);
+
+}
+
+.loader-text {
+    margin-top: 25px;
+    color: rgb(114, 114, 114);
+    font-size: 21px;
+
+}
+
+.loader {
+    margin-top: 155px;
+    height: 30px;
+    aspect-ratio: 2.5;
+    --_g: no-repeat radial-gradient(farthest-side, rgb(185, 185, 255) 90%, #0000);
+    background: var(--_g), var(--_g), var(--_g), var(--_g);
+    background-size: 20% 50%;
+    animation: l43 1s infinite linear;
+}
+
+@keyframes l43 {
+    0% {
+        background-position: calc(0*100%/3) 50%, calc(1*100%/3) 50%, calc(2*100%/3) 50%, calc(3*100%/3) 50%
+    }
+
+    16.67% {
+        background-position: calc(0*100%/3) 0, calc(1*100%/3) 50%, calc(2*100%/3) 50%, calc(3*100%/3) 50%
+    }
+
+    33.33% {
+        background-position: calc(0*100%/3) 100%, calc(1*100%/3) 0, calc(2*100%/3) 50%, calc(3*100%/3) 50%
+    }
+
+    50% {
+        background-position: calc(0*100%/3) 50%, calc(1*100%/3) 100%, calc(2*100%/3) 0, calc(3*100%/3) 50%
+    }
+
+    66.67% {
+        background-position: calc(0*100%/3) 50%, calc(1*100%/3) 50%, calc(2*100%/3) 100%, calc(3*100%/3) 0
+    }
+
+    83.33% {
+        background-position: calc(0*100%/3) 50%, calc(1*100%/3) 50%, calc(2*100%/3) 50%, calc(3*100%/3) 100%
+    }
+
+    100% {
+        background-position: calc(0*100%/3) 50%, calc(1*100%/3) 50%, calc(2*100%/3) 50%, calc(3*100%/3) 50%
+    }
+}

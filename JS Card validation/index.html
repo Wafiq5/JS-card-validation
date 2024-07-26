@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card validation form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="enter">
+                <span class="card-details-head-text" id="cardDetailsHeaderText">Card details</span>
+            </div>
+            <!--!Card input and validation form-->
+            <form action="/" class="main-form">
+                <div class="all-inputs-container">
+                    <!--Name input (Card owner)-->
+                    <div class="enter">
+                        <span class="input-head-text" id="cardOwnerHeaderText">Card Owner</span>
+                    </div>
+                    <div class="name-div">
+                        <input type="text" class="input name-input" id="cardOwnerName" />
+                    </div>
+                    <!--Card Number-->
+                    <div class="enter">
+                        <span class="input-head-text" id="cardNumberHeaderText">Card Number</span>
+                    </div>
+                    <div class="number-div">
+                        <input type="text" class="input numb-input" id="cardNumberPart1" maxlength="4"
+                            placeholder="XXXX" />
+                        <input type="text" class="input numb-input" id="cardNumberPart2" maxlength="4"
+                            placeholder="XXXX" />
+                        <input type="text" class="input numb-input" id="cardNumberPart3" maxlength="4"
+                            placeholder="XXXX" />
+                        <input type="text" class="input numb-input" id="cardNumberPart4" maxlength="4"
+                            placeholder="XXXX" />
+                    </div>
+                    <!-- CVV and date -->
+                    <div class="cvv-date-div">
+                        <span class="input-head-text cvv-head-text" id="cvvNumberHeaderText">CVV</span>
+                        <span class="input-head-text date-head-text" id="expDateHeaderText">Expiration Date</span>
+                        <br />
+                        <div class="cvv-div">
+                            <input type="text" class="input cvv-input" id="cvvNumber" maxlength="3" placeholder="123" />
+                        </div>
+                        <div class="date-div">
+                            <input type="text" class="input date-input month" id="expMonth" maxlength="2"
+                                placeholder="ex. 12" />
+                            <input type="text" class="input date-input year" id="expYear" maxlength="2"
+                                placeholder="ex. 28" />
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="submit-btn" onclick="sendCardInfo()" id="sendCardInfoBtn">
+                    Submit
+                </button>
+                <!--!Loading screen-->
+                <div class="loading-screen" style="display: none">
+                    <div class="loader-container">
+                        <div class="enter">
+                            <span class="loader-card-details-head-text">Card details</span>
+                        </div>
+                        <div class="loader"></div>
+                        <span class="loader-text">Validating Transaction</span>
+                    </div>
+                </div>
+                <!--!Card confirmation form-->
+                <div class="confirmation-screen-container" style="display: none">
+                    <div class="enter">
+                        <span class="card-confirmation-head-text">Card confirmation</span>
+                    </div>
+                    <p class="confirmation-paragraph">
+                        <span class="confirmation-Congratulations-sentence">
+                            <span class="confirmation-Congratulations-word">
+                                Congratulations!
+                            </span>
+                            Your payment transaction has been successfully validated.
+                        </span>
+                        <br /><br />
+                        <span class="confirmation-appreciate-sentence">
+                            Thank you for providing accurate payment information. You can
+                            proceed with confidence, knowing that your transaction has been
+                            processed securely and efficiently.
+                        </span>
+                    </p>
+                    <button type="button" class="submit-btn">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
